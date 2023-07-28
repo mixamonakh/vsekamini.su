@@ -1,0 +1,77 @@
+* {
+  font-family: "MinSans";
+}
+
+body {
+  font-size: 14px;
+  line-height: 171%;
+  font-weight: 400;
+}
+
+main {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+:root {
+  --basic-coral: #FB5935;
+  --darknest: #272B2F;
+  --white: #fff;
+  --basic-green: #36C044;
+  --basic-blue: #356DFB;
+  --basic-red: #FB3535;
+  --gray-dark: #78808A;
+  --txt-gradient: linear-gradient(128deg, #FB5935 0%, #FBC335 73.26%, #FB5935 100%);
+  --basic-coral-the-lightest: #FEDCCB;
+  --basic-coral-dark: #D74D2F;
+  --basic-dark-brown: #261E1E;
+  --basic-gray-the-lightest: #F6F6F6;
+  --gray-30: #E8EBEE;
+}
+
+@font-face {
+  font-family: "MinSans";
+  src: url("../fonts/MinSans-Regular.otf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "MinSans";
+  src: url("../fonts/MinSans-SemiBold.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "MinSans";
+  src: url("../fonts/MinSans-Bold.otf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "MinSans";
+  src: url("../fonts/MinSans-ExtraBold.otf");
+  font-weight: 900;
+}
+.h1 {
+  font-size: 40px;
+  line-height: 140%;
+  font-weight: 700;
+}
+
+.h2 {
+  font-size: 28px;
+  line-height: 143%;
+  font-weight: 700;
+}
+
+.fz20 {
+  font-size: 20px;
+  line-height: 160%;
+}
+
+.fz18 {
+  font-size: 18px;
+  line-height: 133%;
+}
+
+.fz16 {
+  font-size: 16px;
+  line-height: 150%;
+}
