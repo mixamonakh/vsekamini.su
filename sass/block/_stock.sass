@@ -1,0 +1,32 @@
+.stock
+    padding: 100px 0
+    &-item
+        background-color: var(--basic-coral)
+        border-radius: var(--bordrad-20)
+        position: relative
+        overflow: hidden
+        height: 100%
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            width: 50%
+            height: 100%
+            background: url('/image/stock/bg.svg')no-repeat 0%/cover
+        &__content
+            position: relative
+            z-index: 2
+        &__wrapper
+            align-items: center
+        &__title
+            font-size: 40px
+            font-weight: 900
+            line-height: 110%
+        &__subtitle
+            font-size: 16px
+            font-weight: 500
+            text-transform: uppercase
+        &__text
+            margin-bottom: 24px

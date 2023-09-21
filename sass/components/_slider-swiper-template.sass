@@ -1,0 +1,54 @@
+.swiper
+    &-button
+        &-next, &-prev
+            background-color: var(--white)
+            box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1490196078)
+            width: 32px
+            height: 32px
+            border-radius: 100%
+            z-index: 2
+            top: 30%
+            &:hover
+                svg
+                    fill: var(--basic-coral)
+            svg
+                transition: var(--transition)
+                fill: var(--gray-dark)
+            &:after
+                display: none
+                font-size: 0
+        &-prev
+            transform: rotate(180deg)
+            left: -0
+        &-next
+            right: -0
+        &-disabled
+            display: none
+// ! swiper в каталоге для подкатегорий
+.category
+    .swiper
+        &-button
+            &-next, &-prev
+                top: 50%
+// !xxl
+@media (max-width: 1399px)
+
+// !xl
+@media (max-width: 1199px)
+
+// !lg
+@media (max-width: 991px)
+
+// !md
+@media (max-width: 767px)
+    .swiper
+        &-button
+            &-next, &-prev
+                display: none
+        &__module
+            margin-left: 0
+            margin-right: inherit
+            width: 70%
+            overflow: visible
+// !sm
+@media (max-width: 575px)

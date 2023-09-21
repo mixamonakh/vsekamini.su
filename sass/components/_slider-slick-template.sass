@@ -1,0 +1,147 @@
+:root
+    --slick-dots-bg-color: var(--gray-70)
+    --slick-dots-active-bg-color: var(--gray-dark)
+    --slick-dots-width: 6px
+    --slick-dots-height: 6px
+    --slick-dots-gap: 5px
+    --slick-dots-radius: 100%
+    --slick-dots-bottom-position: -17px
+
+    --slick-arrow-width: 12px
+    --slick-arrow-height: 16px
+
+// ! растягиваем слайды слика что бы были одниковой высоты
+.slick-slider
+    margin:0 -24px
+.slick-track
+    display: flex
+    gap: 24px
+.slick-slide
+    height: auto
+
+// ! переопределяем стандартные стили стрелочек slick слайдера
+.slick-arrow
+    font-size: 0
+    background-color: var(--white)
+    box-shadow: 0px 0px 30px 0px #00000026
+    border: none
+    content: ""
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    width: 32px
+    height: 32px
+    border-radius: 100%
+    z-index: 2
+    &::before
+        content: ''
+        width: var(--slick-arrow-width)
+        height: var(--slick-arrow-height)
+        background: url('../icons/slick-arrow.svg')no-repeat 0%/contain
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate( -50%, -50%)
+.slick-disabled
+    display: none !important
+.slick-arrow:hover::before
+    filter: invert(49%) sepia(29%) saturate(7033%) hue-rotate(341deg) brightness(102%) contrast(97%)
+
+.slick-prev
+    transform: rotate(180deg) translateY(50%)
+    left: -5px
+
+.slick-next
+    right: -5px
+
+// ! переопределяем стандартные стили дотстов slick слайдера
+
+.slick-dots
+    margin-bottom: 0
+    list-style-type: none
+    padding: 0
+    margin: 0
+    display: flex !important
+    gap: var(--slick-dots-gap)
+    position: absolute
+    bottom: var(--slick-dots-bottom-position)
+    left: 50%
+    transform: translateX(-50%)
+.slick-dots li
+    width: var(--slick-dots-width)
+    height: var(--slick-dots-height)
+    display: block
+    background-color: var(--slick-dots-bg-color)
+    transition: 0.2s all
+    border-radius: var(--slick-dots-radius)
+.slick-dots li.slick-active
+    background-color: var(--slick-dots-active-bg-color)
+    transform: scale(120%)
+.slick-dots button
+    font-size: 0
+    background: none
+    border: none
+    outline: none
+    padding: 0
+
+// ! оранжевая стрелочка в плашке для слайдера
+.slick-orange-arrows
+    position: relative
+    display: flex
+    div
+        background-color: var(--white)
+        border-radius: 100px
+        box-shadow: 4px 4px 60px 0px rgba(0, 0, 0, 0.05)
+        cursor: pointer
+        position: relative
+        transform: inherit
+        width: 72px
+        height: 48px
+        top: 0
+        &::before
+            display: none
+        svg
+            width: 24px
+            height: 24px
+            flex: 0 0 24px
+            fill: var(--basic-coral)
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate( -50%, -50%)
+        &.slick-disabled
+            display: flex !important
+            background-color: var(--gray-30)
+            svg
+                fill: var(--gray-gray)
+    .prev
+        transform: rotate(180deg)
+        margin-right: 12px
+// ! слайдер отзывов
+.review__slider
+    .slick-dots
+        bottom: -34px
+    .slick-list
+        overflow: visible
+
+// !xxl
+@media (max-width: 1399px)
+
+// !xl
+@media (max-width: 1199px)
+
+// !lg
+@media (max-width: 991px)
+
+// !md
+@media (max-width: 767px)
+    .watched__slider, .review__slider
+        width: 70%
+    .slick-slider
+        margin: 0 -12px
+    .slick-track
+        gap: 12px
+    .slick-list
+        overflow: visible
+// !sm
+@media (max-width: 575px)

@@ -1,0 +1,45 @@
+.triggers
+    border-radius: var(--bordrad-20)
+    background-color: var(--white)
+    padding: 36px 24px
+    &__item
+        display: flex
+        align-items: center
+        &:hover
+            span
+                color: var(--basic-coral-dark)
+            svg
+                fill: var(--basic-coral)
+        svg
+            width: 48px
+            height: 48px
+            flex: 0 0 48px
+            fill: var(--darknest)
+            margin-right: 16px
+// !xxl
+@media (max-width: 1399px)
+
+// !xl
+@media (max-width: 1199px)
+
+// !lg
+@media (max-width: 991px)
+    .triggers
+        .row
+            gap: 24px
+            & > div
+                width: calc( 50% - 12px)
+        &__item
+            text-align: left
+// !md
+@media (max-width: 767px)
+    .triggers
+        .row
+            gap: 24px
+            & > div
+                width: inherit
+        &__item
+            text-align: left
+            
+// !sm
+@media (max-width: 575px)

@@ -1,0 +1,52 @@
+.product-mini
+    display: flex
+    align-items: center
+    &__img
+        border-radius: var(--bordrad)
+        margin-right: 16px
+        width: 96px
+        height: 96px
+        object-fit: cover
+    &__prices
+        margin-bottom: 6px
+        display: flex
+        justify-content: space-between
+    &__price
+        font-size: 18px
+        font-weight: 900
+        line-height: 24px
+        letter-spacing: 0.6px
+    &__oldprice
+        font-size: 16px
+        line-height: 24px
+        color: var(--gray-dark)
+        text-decoration: line-through
+// !xxl
+@media (max-width: 1399px)
+
+// !xl
+@media (max-width: 1199px)
+
+// !lg
+@media (max-width: 991px)
+
+// !md
+@media (max-width: 767px)
+    .product-mini
+        &__price
+            font-size: 12px
+            line-height: 14px
+        &__oldprice
+            font-size: 10px
+            line-height: 14px
+        &__content
+            p
+                font-size: 10px
+                line-height: 14px
+        &__img
+            margin-right: 8px
+            width: 60px
+            height: 60px
+
+// !sm
+@media (max-width: 575px)

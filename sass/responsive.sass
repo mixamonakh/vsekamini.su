@@ -1,0 +1,333 @@
+@media (min-width: 1400px)
+    .container
+        max-width: 1140px
+    
+// !xxl
+@media (max-width: 1399px)
+
+// !xl
+@media (max-width: 1199px)
+    main
+        margin: 127px auto 0 auto
+    .header
+        position: fixed
+        top: 0
+        width: 100%
+    body
+        line-height: 140%
+    .stock
+        &-item
+            &__content
+                padding: 24px
+    .banner
+        .h1
+            line-height: 100%
+            margin-bottom: 12px
+        .mb32
+            margin-bottom: 16px
+        .triggers
+            margin-top: 24px
+        &__content
+            bottom: -70px
+// !lg
+@media (max-width: 991px)
+    .banner
+        &__picture
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            height: 100%
+            width: 100%
+            img
+                height: 100%
+                object-fit: cover
+        &__content
+            position: inherit
+            text-align: left
+            bottom: 0
+        .fz16
+            font-size: 12px
+        .triggers
+            margin-top: 40px
+            background-color: rgba(246, 246, 246, .7)
+    .category-cards
+        &__items
+            a
+                overflow: hidden
+                min-height: 120px
+            .fz20
+                font-size: 14px
+        &__item-1
+            grid-area: category-cards__item-1
+            img
+                right: 30px
+                width: 150px
+        &__item-2
+            grid-area: category-cards__item-2
+            img
+                width: 168px
+                right: 0px
+        &__item-3
+            grid-area: category-cards__item-3
+            img
+                right: 20px
+                width: 120px
+        &__item-4
+            grid-area: category-cards__item-4
+            span
+                padding: 15px !important
+            img
+                right: 0px
+                top: inherit !important
+                bottom: 0
+                width: 100px
+        &__item-5
+            grid-area: category-cards__item-5
+            span
+                padding: 15px !important
+            img
+                width: 110px
+                right: -20px
+                bottom: -50px
+                top: inherit !important
+        &__item-6
+            grid-area: category-cards__item-6
+            span
+                padding: 15px !important
+            img
+                width: 130px
+        &__item-7
+            grid-area: category-cards__item-7
+            span
+                padding: 40px 150px 40px 24px !important
+            img
+                right: -20px
+                width: 150px
+                top: inherit !important
+                bottom: 0
+    .custom-category
+        p
+            font-size: 14px
+            margin: 0
+            line-height: 20px
+    .consultation
+        &__box
+            padding: 16px
+            width: 200px
+    .articles
+        .blog-item
+            margin-bottom: 16px
+        &__wrapper
+            .blog-item
+                margin-bottom: 16px
+
+// !md
+@media (max-width: 767px)
+    main
+        margin: 99px auto 0 auto
+    .header
+        &-center
+            position: relative
+            &__wrapper
+                .button
+                    display: none
+            .search
+                position: absolute
+                right: -1000px
+            .logo
+                img
+                    width: 77px
+                    height: 32px
+            .search-btn-mobile
+                display: flex
+    .banner
+        &__content
+            text-align: center
+    .category-cards
+        &__items
+            display: grid
+            grid-template-columns: 1fr 1fr
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr
+            gap: 12px 12px
+            grid-template-areas: "category-cards__item-1 category-cards__item-1" "category-cards__item-2 category-cards__item-2" "category-cards__item-3 category-cards__item-3" "category-cards__item-4 category-cards__item-6" "category-cards__item-5 category-cards__item-6" "category-cards__item-7 category-cards__item-7"
+            a
+                min-height: 96px
+                overflow: hidden
+        &__item-1
+            grid-area: category-cards__item-1
+            img
+                right: 30px
+                width: 100px
+        &__item-2
+            grid-area: category-cards__item-2
+            img
+                width: 128px
+                right: 10px
+        &__item-3
+            grid-area: category-cards__item-3
+            img
+                right: 20px
+                width: 82px
+        &__item-4
+            grid-area: category-cards__item-4
+            span
+                padding: 15px !important
+            img
+                right: 0px
+                top: inherit !important
+                bottom: 0
+                width: 70px
+        &__item-5
+            grid-area: category-cards__item-5
+            span
+                padding: 15px !important
+            img
+                width: 100px
+                right: -20px
+                bottom: -50px
+                top: inherit !important
+        &__item-6
+            grid-area: category-cards__item-6
+            span
+                padding: 15px !important
+            img
+                width: 130px
+        &__item-7
+            grid-area: category-cards__item-7
+            span
+                padding: 40px 150px 40px 24px !important
+            img
+                right: -20px
+                top: -20px
+                width: 130px
+    .section-title
+        &__link
+            span
+                display: none
+            svg
+                width: 24px
+                height: 24px
+                fill: var(--darknest)
+    .custom-category
+        p
+            .mb24
+                margin-bottom: 0
+        &__item
+            margin-bottom: 16px
+        &__box
+            flex-direction: row
+            .custom-category__item
+                flex: 0 0 calc( 50% - 8px)
+                &:nth-child(1)
+                    margin-right: 16px
+    .stock
+        padding: 48px 0
+        &-item
+            &::before
+                background: url(/image/stock/bg-mob.svg) no-repeat 0%/cover
+                width: 100%
+            &__wrapper
+                position: relative
+                z-index: 2
+                text-align: center
+                padding: 24px
+            &__title
+                font-size: 25px
+                margin-bottom: 8px
+                line-height: 33px
+            &__subtitle
+                font-size: 12px
+            &__content
+                margin-bottom: 16px
+                padding: 0
+            picture
+                display: flex
+                justify-content: center
+            img
+                width: 220px
+    .aboutus
+        .txt-gradient
+            text-align: center
+            padding: 0 8%
+        .triggers
+            display: none
+        .mb72
+            margin-bottom: 0
+    .review
+        &__head
+            margin-bottom: 24px
+            .d-flex
+                display: none !important
+        &-item
+            padding: 24px 16px
+            &__title
+                font-size: 12px
+                line-height: 16px
+                margin-bottom: 6px
+                height: 32px
+            &__img
+                img
+                    width: 30px
+                    height: 30px
+            &__name, &__date
+                font-size: 10px
+                line-height: 14px
+            &__content
+                font-size: 10px
+                line-height: 16px
+                margin-bottom: 16px
+    .plashka
+        font-size: 10px
+        line-height: 14px
+        margin-bottom: 6px
+    // ! вывод статей на главной
+    .articles
+        padding: 36px 0 72px 0
+        .blog-item
+                margin-bottom: 0
+        &__wrapper
+            flex-direction: row
+            flex-wrap: wrap
+            gap: 12px
+            .blog-item
+                margin-bottom: 0
+                flex: 0 0 calc( 50% - 6px )
+    .idea
+        a
+            padding: 12px
+            font-size: 10px
+            line-height: 14spx
+            svg
+                width: 20px
+                height: 20px
+    .sending
+        padding: 32px 12px
+        &__head
+            text-align: center
+            p
+                &:nth-child(1)
+                    padding: 0 25%
+                    margin-bottom: 16px
+                &:nth-child(2)
+                    font-size: 10px
+                    line-height: 16px
+                    margin-bottom: 24px
+        &__box
+            flex-direction: column
+            gap: 8px
+            button
+                margin-left: 0
+            input
+                height: 40px
+        .fz12
+            font-size: 10px
+            margin-bottom: 0
+    .brand
+        &__wrapper
+            overflow-x: scroll
+            .row
+                width: 1000px
+
+// !sm
+@media (max-width: 575px)

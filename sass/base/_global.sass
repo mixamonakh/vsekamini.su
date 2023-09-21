@@ -1,0 +1,69 @@
+*
+    font-family: 'MinSans'
+:root
+    --bordrad: 10px
+    --bordrad-20: 20px
+    --bordrad-30: 30px
+    --transition: .4s all
+body
+    font-size: 14px
+    line-height: 171%
+    font-weight: 400
+    color: var(--darknest)
+main
+    max-width: 1920px
+    margin: 0 auto
+    overflow: hidden
+.ul-unset
+    padding: 0
+    list-style-type: none
+.ttu
+    text-transform: uppercase
+// ! точечно убрать margin параграфу
+.p-one
+    margin: 0
+span, p, svg
+    transition: var(--transition)
+
+// ! стили для бежево-розовых карточек
+.coral-light-bg
+    background-color: var(--basic-coral-the-lightest)
+    transition: var(--transition)
+    &:hover
+        background-color: var(--basic-coral-dark)
+.sticky-box
+    height: 100%
+    position: relative
+    & > *
+        position: sticky
+        top: 0
+.section-title
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__link
+        transition: inherit !important
+        color: var(--gray-dark)
+        &:hover
+            svg
+                fill: var(--basic-coral)
+        svg
+            width: 16px
+            height: 16px
+            fill: var(--gray-dark)
+.page-title
+    margin-bottom: 24px
+    h1
+        margin: 0
+        font-size: 36px
+        font-weight: 700
+        line-height: 110%
+
+
+// ! скругления по классам
+.br-10
+    border-radius: var(--bordrad)
+.br-20
+    border-radius: var(--bordrad-20)
+.br-30
+    border-radius: var(--bordrad-30)

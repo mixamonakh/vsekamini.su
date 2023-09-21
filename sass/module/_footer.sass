@@ -1,0 +1,168 @@
+.footer
+    background-color: var(--basic-dark-brown)
+    padding: 48px 0 24px 0
+    ul
+        margin: 0
+    &__logo
+        margin-bottom: 24px
+        display: inline-flex
+        img
+            width: 109px
+            height: 46px
+    &__text
+        color: var(--basic-coral-the-lightest)
+        padding-right: 5%
+    &__list
+        li
+            &:not(:last-child)
+                margin-bottom: 24px
+        a
+            text-transform: uppercase
+            font-weight: 700
+            color: var(--basic-coral-the-lightest)
+
+.footer-bot
+    padding-top: 24px
+    border-top: 1px solid var(--basic-coral-the-lightest)
+    margin-top: 38px
+    color: var(--white)
+    &__prava
+        padding-top: 48px
+        display: inline-flex
+    
+.socials
+    display: flex
+    gap: 48px
+    svg
+        fill: var(--white)
+        width: 24px
+        height: 24px
+
+
+
+.call-phone, .mail-send, .location-item
+    transition: inherit
+    display: flex
+    align-items: center
+    color: var(--white)
+    &:hover
+        color: var(--basic-coral)
+        svg
+            fill: var(--basic-coral)
+    svg
+        fill: var(--white)
+        width: 24px
+        height: 24px
+        margin-right: 8px
+.call-phone
+    font-size: 16px
+    text-transform: uppercase
+    font-weight: 900
+
+.footer-accordion
+    &__name
+        color: var(--basic-coral-the-lightest)
+        text-transform: uppercase
+        font-weight: 700
+        display: flex
+        margin-bottom: 24px
+        svg
+            width: 24px
+            height: 24px
+            fill: var(--white)
+    &__content
+        li
+            &:not(:last-child)
+                margin-bottom: 8px
+        a
+            color: var(--white)
+    &__icon
+        display: none
+
+// !xxl
+@media (max-width: 1399px)
+
+// !xl
+@media (max-width: 1199px)
+    .footer
+        margin-bottom: 80px
+// !lg
+@media (max-width: 991px)
+
+// !md
+@media (max-width: 767px)
+    .footer
+        padding: 24px 0 0 0
+        margin-bottom: 62px
+        &__logo
+            display: flex
+            justify-content: center
+            margin-bottom: 16px
+        &__info
+            text-align: center
+            margin-bottom: 32px
+            .button
+                min-height: 40px
+        &__text
+            padding-right: 0
+            padding: 0 8%
+            font-size: 12px
+            line-height: 16px
+        .call-phone, .mail-send, .location-item
+            justify-content: center
+        .mail-send, .location-item
+            font-weight: 300
+            svg
+                display: none
+        .mail-send
+            margin-bottom: 12px
+        &__list
+            margin-top: 28px
+            text-align: center
+            li
+                &:not(:last-child)
+                    margin-bottom: 16px
+        &-bot
+            border-top: 0
+            font-size: 12px
+            line-height: 16px
+            &__prava
+                padding: 4px 0
+            .row
+                & > div
+                    text-align: center
+                    &:nth-child(1)
+                        order: 2
+                        margin-bottom: 24px
+                    &:nth-child(2)
+                        order: 1
+                        justify-content: center !important
+                        margin-bottom: 24px
+                    &:nth-child(3)
+                        order: 3
+                        background: var(--darknest)
+
+    .footer-accordion
+        padding-bottom: 12px
+        &__name
+            justify-content: space-between
+            margin-bottom: 12px
+            svg
+                transition: var(--transition)
+            &.active
+                svg
+                    transform: rotate(180deg)
+        &__icon
+            display: flex
+        &__content
+            max-height: 0
+            overflow: hidden
+            transition: var(--transition)
+            border-bottom: 1px solid var(--white)
+            ul
+                padding: 12px 0
+            &.active
+                max-height: 500px
+        
+// !sm
+@media (max-width: 575px)

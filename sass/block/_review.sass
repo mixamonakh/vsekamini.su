@@ -1,0 +1,73 @@
+.review
+    background-color: var(--basic-gray-the-lightest)
+    padding: 48px 0 72px 0
+    &__head
+        margin-bottom: 64px
+
+.review-item
+    padding: 40px 48px
+    background-color: var(--white)
+    border-radius: var(--bordrad-20)
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 100%
+    &__title
+        font-size: 18px
+        font-weight: 700
+        margin-bottom: 14px
+        height: 48px
+        display: flex
+        align-items: center
+    &__content
+        border-radius: var(--bordrad)
+        overflow: hidden
+        margin-bottom: 24px
+        p
+            margin: 0
+        iframe
+            width: 260px
+            height: 168px
+        img
+            width: 100%
+            background-color: var(--basic-gray-the-lightest)
+            border-radius: var(--bordrad)
+    &__user
+        display: flex
+        align-items: center
+    &__img
+        img
+            width: 48px
+            height: 48px
+            margin-right: 12px
+            border-radius: 100%
+    &__box
+        display: flex
+        flex-direction: column
+    &__name
+        font-size: 14px
+        display: inline-flex
+        font-weight: 700
+        line-height: 24px
+    &__date
+        color: var(--gray-dark)
+        font-weight: 500
+        line-height: 24px
+        
+
+
+.plashka
+    background-color: var(--basic-coral)
+    border-radius: 5px
+    line-height: 24px
+    font-size: 14px
+    font-weight: 500
+    padding: 0px 20px
+    color: var(--white)
+    margin-bottom: 14px
+    display: inline-flex
+    border: 1px solid transparent
+    transition: var(--transition)
+    &:hover
+        border: 1px solid var(--basic-coral-dark)
+    

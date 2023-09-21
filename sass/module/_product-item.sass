@@ -1,0 +1,278 @@
+.product-item
+    display: flex
+    flex-direction: column
+    padding: 12px 12px 24px 12px
+    transition: var(--transition)
+    border-radius: var(--bordrad-20)
+    &:hover
+        box-shadow: 0px 0px 30px 0px rgba(132, 160, 233, 0.15)
+        background-color: var(--white)
+        .product-item__buy
+            opacity: 1
+            z-index: 1
+    // ! картинка
+    .gallery
+        background-color: var(--basic-gray-the-lightest)
+        border-radius: var(--bordrad)
+        position: relative
+        margin-bottom: 16px
+        &__img
+            img
+                width: 100%
+                border-radius: var(--bordrad-20)
+        // ! позиционирование блока с кнопками и стикерами на картинке
+        &__ui
+            position: absolute
+            width: 100%
+            padding: 8px
+            top: 0
+            left: 0
+            right: 0
+            display: flex
+            justify-content: space-between
+    &__name
+        font-size: 16px
+        font-weight: 700
+        line-height: 24px
+        display: flex
+        align-items: center
+        height: 48px
+        color: var(--darknest)
+        margin-bottom: 8px
+    &__head
+        margin-top: 24px
+        margin-bottom: 24px
+    &__info
+    // ! характеристики
+    .chars
+        opacity: 0.8
+        padding-left: 20px
+        margin: 0
+    // ! пункты В наличии, не в наличии, предзаказ и т.п.
+    .points
+        display: none
+        &__item
+            display: flex
+            align-items: center
+            margin-bottom: 8px
+            &:nth-last-child(1)
+                margin-bottom: 0
+        &__icon
+            width: 24px
+            height: 24px
+            background-repeat: no-repeat
+            background-size: contain
+            display: block
+            margin-right: 8px
+            background-position: 0 0
+            &_stock
+                background-image: url('../icons/instock.svg')
+            &_delivery
+                background-image: url('../icons/delivery.svg')
+            &_predzakaz
+                background-image: url('../icons/preorder.svg')
+            &_nostock
+                background-image: url('../icons/nostock.svg')
+    &__buy
+        z-index: -1
+        opacity: 0
+        transition: var(--transition)
+    // ! блок с кнопкой доабвить в корзину
+    &__add-buy
+        .button
+            width: 100%
+        svg
+            width: 24px
+            height: 24px
+            fill: var(--white)
+            margin-right: 8px
+    // ! блок с кнопкой в корзине
+    &__in-buy
+        display: none
+        justify-content: space-between
+        gap: 12px
+        .button
+            flex: 1 0 calc( 50% - 6px )
+    // ! добавить еще товар в карзину
+    .counter
+        border-radius: var(--bordrad)
+        border: 1px solid var(--gray-gray)
+        display: flex
+        justify-content: center
+        align-items: center
+        flex: 1 0 calc( 50% - 6px )
+        a
+            cursor: pointer
+            &:hover
+                svg
+                    fill: var(--basic-coral)
+        svg
+            width: 24px
+            height: 24px
+            flex: 0 0 24px
+        &__numb
+            font-size: 18px
+            font-weight: 500
+            padding: 0 14px
+// ! акции, новинка и так далее на картинке
+.stickers
+    display: flex
+    flex-wrap: wrap
+    width: 50%
+    span
+        font-size: 12px
+        line-height: 12px
+        height: 24px
+        color: var(--white)
+        font-weight: 700
+        padding: 4px 10px
+        border-radius: 5px
+        margin-right: 8px
+        margin-bottom: 8px
+        display: flex
+        justify-content: center
+        white-space: nowrap
+        align-items: center
+        &:nth-last-child(1)
+            margin-right: 0
+    &__new
+        background-color: var(--basic-green)
+    &__akcia
+        background-color: var(--basic-red)
+    &__fast
+        background-color: var(--basic-blue)
+// ! блок с кнопочками Избранное и Сравнение
+.product-panel
+    width: 50%
+    display: flex
+    justify-content: flex-end
+    // ! этот класс для блока, который находится при адаптации карточки товара в строчный вариант
+    &_info
+        display: none
+    a
+        margin-right: 10px
+        transition: inherit !important
+        &:nth-last-child(1)
+            margin-right: 0
+    svg
+        width: 24px
+        height: 24px
+    &__favorite
+        stroke: var(--gray-gray)
+        fill: var(--white)
+        &.active
+            stroke: var(--basic-red)
+            fill: var(--basic-red)
+        &:hover
+            stroke: var(--basic-red)
+            fill: var(--basic-red)
+    &__compare
+        fill: var(--gray-gray)
+        &.active
+            stroke: var(--basic-red)
+            fill: var(--basic-red)
+        &:hover
+            fill: var(--basic-red)
+// ! блок с ценами
+.prices
+    display: flex
+    flex-wrap: wrap
+    &__base
+        font-size: 22px
+        font-weight: 900
+        line-height: 22px
+        margin-right: 16px
+    &__old
+        color: var(--gray-dark)
+        font-size: 16px
+        text-decoration: line-through
+
+
+.product-item
+    &_list
+        flex-direction: row
+        align-items: center
+        margin-bottom: 16px
+        .product-item
+            &__buy
+                opacity: 1
+            &__head
+                margin: 0
+                margin-bottom: 16px
+                display: flex
+            &__add-buy
+                .button
+                    padding: 11px 16px
+        .points
+            display: block
+        .chars
+            &__item
+                white-space: nowrap
+        .product-panel
+            &_gallery
+                display: none
+            &_info
+                display: flex
+        .gallery
+            margin-bottom: 0
+        .prices
+            &__base
+                margin-bottom: 6px
+        & > div
+            &:nth-child(1)
+                flex: 1 0 calc( 33% - 24px )
+                margin-right: 24px
+            &:nth-child(2)
+                flex: 1 0 calc(33% - 56px)
+                margin-right: 56px
+            &:nth-child(3)
+                flex: 0 0 calc( 33% - 49px)
+                margin-right: 16px
+
+
+// !xxl
+@media (max-width: 1399px)
+
+// !xl
+@media (max-width: 1199px)
+
+// !lg
+@media (max-width: 991px)
+
+// !md
+@media (max-width: 767px)
+    .product-item
+        &__name
+            font-size: 14px
+            line-height: 20px
+            height: 40px
+        .chars
+            &__item
+                font-size: 12px
+                line-height: 20px
+        &__add-buy
+            svg
+                margin-right: 4px
+        &__buy
+            opacity: 1
+    .prices
+        &__base
+            font-size: 18px
+            margin-right: 8px
+        &__old
+            font-size: 14px
+    .stickers
+        span
+            font-size: 10px
+            line-height: 10px
+    .product-panel
+        svg
+            width: 20px
+            height: 20px
+
+
+
+
+    
+// !sm
+@media (max-width: 575px)
