@@ -15,8 +15,9 @@
         background-color: var(--basic-gray-the-lightest)
         border-radius: var(--bordrad)
         position: relative
-        margin-bottom: 16px
+        margin-bottom: 24px
         &__img
+            background-color: var(--basic-gray-the-lightest)
             img
                 width: 100%
                 border-radius: var(--bordrad-20)
@@ -42,7 +43,7 @@
     &__head
         margin-top: 24px
         margin-bottom: 24px
-    &__info
+    // &__info
     // ! характеристики
     .chars
         opacity: 0.8
@@ -79,6 +80,8 @@
         transition: var(--transition)
     // ! блок с кнопкой доабвить в корзину
     &__add-buy
+        &.hidden
+            display: none !important
         .button
             width: 100%
         svg
@@ -91,6 +94,8 @@
         display: none
         justify-content: space-between
         gap: 12px
+        &.visible
+            display: flex !important
         .button
             flex: 1 0 calc( 50% - 6px )
     // ! добавить еще товар в карзину
@@ -161,18 +166,25 @@
         stroke: var(--gray-gray)
         fill: var(--white)
         &.active
-            stroke: var(--basic-red)
-            fill: var(--basic-red)
+            stroke: var(--basic-red) !important
+            fill: var(--basic-red) !important
         &:hover
             stroke: var(--basic-red)
             fill: var(--basic-red)
     &__compare
         fill: var(--gray-gray)
         &.active
-            stroke: var(--basic-red)
-            fill: var(--basic-red)
+            stroke: var(--basic-red) !important
+            fill: var(--basic-red) !important
         &:hover
             fill: var(--basic-red)
+    &__share
+        fill: var(--gray-gray)
+        &:hover
+            fill: var(--basic-red)
+    // ! это класс для карточки товара находящейся на странице категории
+    &_category
+        display: none
 // ! блок с ценами
 .prices
     display: flex
@@ -187,13 +199,21 @@
         font-size: 16px
         text-decoration: line-through
 
-
+// ! стили для карточки товара которая раскрывается в строчку
 .product-item
     &_list
         flex-direction: row
         align-items: center
         margin-bottom: 16px
         .product-item
+            &__mobile-wrap
+                display: flex
+                & > div
+                    &:nth-child(1)
+                        flex: 1 0 calc( 50% - 25px )
+                        margin-right: 50px
+                    &:nth-child(2)
+                        flex: 0 0 calc( 50% - 25px )
             &__buy
                 opacity: 1
             &__head
@@ -205,9 +225,6 @@
                     padding: 11px 16px
         .points
             display: block
-        .chars
-            &__item
-                white-space: nowrap
         .product-panel
             &_gallery
                 display: none
@@ -222,12 +239,16 @@
             &:nth-child(1)
                 flex: 1 0 calc( 33% - 24px )
                 margin-right: 24px
-            &:nth-child(2)
-                flex: 1 0 calc(33% - 56px)
-                margin-right: 56px
             &:nth-child(3)
                 flex: 0 0 calc( 33% - 49px)
                 margin-right: 16px
+
+// ! КЛАССЫ для карточки товара находящейся на странице категории
+.product-item
+    &__remove-item
+        display: none
+    &__add-item-mobile
+        display: flex
 
 
 // !xxl
@@ -270,6 +291,96 @@
             width: 20px
             height: 20px
 
+    .category   // ! адаптация карточки товара для страницы КАТЕГОРИИ
+        .counter
+            flex: 0 0 100px
+        .product-item
+            flex-direction: row
+            gap: 16px
+            padding: 0
+            padding-bottom: 24px
+            margin-bottom: 16px
+            border-radius: 0
+            border-bottom: 1px solid var(--gray-gray)
+            &__head
+                margin-top: 0
+                margin-bottom: 24px
+            &__add-buy
+                display: flex
+                justify-content: space-between
+                svg
+                    margin-right: 0
+                .button
+                    width: 70px
+                span
+                    display: none
+            &__name
+                height: auto
+            &__in-buy
+                flex-direction: column-reverse
+            &__add-item-mobile
+                display: flex
+                justify-content: space-between
+            &__remove-item
+                width: 32px
+                height: 32px
+                border: 1px solid var(--basic-red)
+                border-radius: 100%
+                display: flex
+                justify-content: center
+                align-items: center
+                svg
+                    width: 16px
+                    fill: var(--basic-red)
+                    height: 16px
+        .chars
+            display: none
+        .gallery
+            display: flex
+            flex-direction: column-reverse
+            flex: 0 0 100px
+            background-color: transparent
+            margin-bottom: 0
+            align-self: flex-start
+            &__img
+                img
+                    border-radius: 5px
+            &__ui
+                position: relative
+                padding: 0
+        .product-panel
+            &_gallery
+                display: none
+            &_category
+                display: flex
+                justify-content: space-between
+                align-items: center
+                .product-panel
+                    &__favorite
+                        stroke: var(--gray-gray)
+                    &__compare
+                        svg
+                            fill: var(--gray-gray)
+                a
+                    margin-right: 0
+        .stickers
+            width: 100%
+            margin-bottom: 16px
+            justify-content: space-between
+            gap: 4px
+            span
+                color: var(--txt-the-darknest)
+                text-transform: uppercase
+                margin-right: 0
+                margin-bottom: 0
+                display: flex
+                flex: 1
+            &__new
+                background-color: transparent
+                border: 1px solid var(--basic-green)
+            &__akcia
+                background-color: transparent
+                border: 1px solid var(--basic-red)
 
 
 

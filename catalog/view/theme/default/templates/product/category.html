@@ -31,7 +31,7 @@
                         <svg>
                             <use xlink:href="/image/sprite.svg#location"></use>
                         </svg>
-                        <span>Москва и Московская область</span>
+                        <span>Москва</span>
                     </div>
                     <nav class="menu">
                         <ul>
@@ -54,7 +54,7 @@
                                     </a>
 
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">О компании</a></li>
+                                        <li><a class="dropdown-item" href="https://ya.ru">О компании</a></li>
                                         <li><a class="dropdown-item" href="#">Гарантия и возврат </a></li>
                                         <li><a class="dropdown-item" href="#">Сотрудничество</a></li>
                                         <li><a class="dropdown-item" href="#">Вакансии</a></li>
@@ -155,11 +155,6 @@
                             </div>
                             <span class="fz12 fw700 darknest">Профиль</span>
                         </a>
-                    </div>
-                    <div class="search-btn-mobile">
-                        <svg>
-                            <use xlink:href="/image/sprite.svg#search"></use>
-                        </svg>
                     </div>
                     <a href="tel:" class="button button_transparent-bg">Заказать звонок</a>
                 </div>
@@ -382,9 +377,10 @@
                 </div>
                 <div class="row">
                     <div class="col-md-3">
-
+                        <!-- сюда вывести фильтры -->
                     </div>
                     <div class="col-md-9">
+                        <!-- Слайдер с подкатегориями -->
                         <div class="subcategory-slider mb32">
                             <div class="swiper">
                                 <div class="swiper-wrapper">
@@ -461,8 +457,9 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="h2 mb32">Хиты продаж в категории</p>
+                        <p class="category__title h2">Хиты продаж в категории</p>
                         <div class="category__panel mb16">
+                            <!-- Кнопки для переключения Виды отображения карточек товаров -->
                             <div class="view-buttons">
                                 <div class="view-buttons__box">
                                     <a class="view-buttons__cards active">
@@ -477,6 +474,7 @@
                                     </a>
                                 </div>
                             </div>
+                            <!-- Выбор опций -->
                             <div class="options-box">
                                 <!-- сюда вывести опции ( популярные, по цене, по названию и т.д. ) -->
                                 options
@@ -486,15 +484,19 @@
                             <div class="row mb16">
                                 <div class="col-md-4">
                                     <div class="product-item">
+                                        <!-- Галерея изображений -->
                                         <div class="gallery">
                                             <a href="#" class="gallery__img">
                                                 <img src="https://dummyimage.com/474x474" alt="">
                                             </a>
+                                            <!-- Тут стикеры Акция/Новинка и т.д. + блок с кнопками для добавления в Избранное и т.д. -->
                                             <div class="gallery__ui">
+                                                <!-- Стикеры -->
                                                 <div class="stickers">
                                                     <span class="stickers__new">New</span>
                                                     <span class="stickers__akcia">-10%</span>
                                                 </div>
+                                                <!-- Добавление в избранное -->
                                                 <div class="product-panel product-panel_gallery">
                                                     <!-- Добавить к product-panel__favorite и product-panel__compare класс active для изменения состояния -->
                                                     <a href="" class="product-panel__favorite active">
@@ -510,85 +512,110 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="product-item__content">
-                                            <a href="#" class="product-item__name">Печь-камин «Varde Uniq 2» Черная
-                                                сталь</a>
-                                            <ul class="chars">
-                                                <li class="chars__item">Отапливаемый объем: 240 м3</li>
-                                                <li class="chars__item">Материал топки: сталь, шамот</li>
-                                                <li class="chars__item">Отапливаемый объем: 240 м3</li>
-                                                <li class="chars__item">Материал топки: сталь, шамот</li>
-                                                <li class="chars__item">Отапливаемый объем: 240 м3</li>
-                                                <li class="chars__item">Материал топки: сталь, шамот</li>
-                                            </ul>
-                                        </div>
-                                        <div class="product-item__info">
-                                            <div class="product-item__head">
-                                                <div class="prices">
-                                                    <span class="prices__base">92 250₽</span>
-                                                    <span class="prices__old">102 500₽₽</span>
-                                                </div>
-                                                <div class="product-panel product-panel_info">
-                                                    <a href="" class="product-panel__favorite">
-                                                        <svg>
-                                                            <use xlink:href="/image/sprite.svg#product-favorite"></use>
-                                                        </svg>
-                                                    </a>
-                                                    <a href="" class="product-panel__compare">
-                                                        <svg>
-                                                            <use xlink:href="/image/sprite.svg#compare"></use>
-                                                        </svg>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="points">
-                                                <ul class="ul-unset">
-                                                    <li class="points__item">
-                                                        <span class="points__icon points__icon_stock"></span>
-                                                        <span>Есть в наличии</span>
-                                                    </li>
-                                                    <li class="points__item">
-                                                        <span class="points__icon points__icon_delivery"></span>
-                                                        <span>Доставим завтра</span>
-                                                    </li>
-                                                    <!-- <li class="points__item">
-                                                        <span class="points__icon points__icon_predzakaz"></span>
-                                                        <span>Предзаказ</span>
-                                                    </li>
-                                                    <li class="points__item">
-                                                        <span class="points__icon points__icon_nostock"></span>
-                                                        <span>Товар закончился</span>
-                                                    </li> -->
+                                        <div class="product-item__mobile-wrap">
+                                            <div class="product-item__content">
+                                                <a href="#" class="product-item__name">Печь-камин «Varde Uniq 2» Черная
+                                                    сталь</a>
+                                                <ul class="chars">
+                                                    <li class="chars__item">Отапливаемый объем: 240 м3</li>
+                                                    <li class="chars__item">Материал топки: сталь, шамот</li>
+                                                    <li class="chars__item">Отапливаемый объем: 240 м3</li>
+                                                    <li class="chars__item">Материал топки: сталь, шамот</li>
+                                                    <li class="chars__item">Отапливаемый объем: 240 м3</li>
+                                                    <li class="chars__item">Материал топки: сталь, шамот</li>
                                                 </ul>
                                             </div>
-                                            <div class="product-item__buy">
-                                                <div class="product-item__add-buy">
-                                                    <a href="" class="button">
-                                                        <svg>
-                                                            <use xlink:href="/image/sprite.svg#cart"></use>
-                                                        </svg>
-                                                        <span>Добавить в корзину</span>
-                                                    </a>
+                                            <div class="product-item__info">
+                                                <div class="product-item__head">
+                                                    <div class="prices">
+                                                        <span class="prices__base">92 250₽</span>
+                                                        <span class="prices__old">102 500₽₽</span>
+                                                    </div>
+                                                    <div class="product-panel product-panel_info">
+                                                        <a href="" class="product-panel__favorite">
+                                                            <svg>
+                                                                <use xlink:href="/image/sprite.svg#product-favorite"></use>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="" class="product-panel__compare">
+                                                            <svg>
+                                                                <use xlink:href="/image/sprite.svg#compare"></use>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
                                                 </div>
-                                                <div class="product-item__in-buy">
-                                                    <a href="" class="button button_go-basker">
-                                                        <p class="p-one">
-                                                            <span class="fz14 fw700 white">В корзине</span>
-                                                            <span class="fz12 fw500 white">Перейти</span>
-                                                        </p>
-                                                    </a>
-                                                    <div class="counter">
-                                                        <a class="counter_minus">
+                                                <!-- Этот блок появляется только при строчном отображении карточки -->
+                                                <div class="points">
+                                                    <ul class="ul-unset">
+                                                        <li class="points__item">
+                                                            <span class="points__icon points__icon_stock"></span>
+                                                            <span>Есть в наличии</span>
+                                                        </li>
+                                                        <li class="points__item">
+                                                            <span class="points__icon points__icon_delivery"></span>
+                                                            <span>Доставим завтра</span>
+                                                        </li>
+                                                        <!-- <li class="points__item">
+                                                            <span class="points__icon points__icon_predzakaz"></span>
+                                                            <span>Предзаказ</span>
+                                                        </li>
+                                                        <li class="points__item">
+                                                            <span class="points__icon points__icon_nostock"></span>
+                                                            <span>Товар закончился</span>
+                                                        </li> -->
+                                                    </ul>
+                                                </div>
+                                                <div class="product-item__buy">
+                                                    <!-- Добавить к product-item__add-buy класс hidden для скрытия -->
+                                                    <div class="product-item__add-buy">
+                                                        <a href="" class="button">
                                                             <svg>
-                                                                <use xlink:href="/image/sprite.svg#minus"></use>
+                                                                <use xlink:href="/image/sprite.svg#cart"></use>
                                                             </svg>
+                                                            <span>Добавить в корзину</span>
                                                         </a>
-                                                        <span class="counter__numb">1</span>
-                                                        <a class="counter__plus">
-                                                            <svg>
-                                                                <use xlink:href="/image/sprite.svg#plus"></use>
-                                                            </svg>
+                                                        <div class="product-panel product-panel_category">
+                                                            <!-- Добавить к product-panel__favorite и product-panel__compare класс active для изменения состояния -->
+                                                            <a href="" class="product-panel__favorite active">
+                                                                <svg>
+                                                                    <use xlink:href="/image/sprite.svg#product-favorite"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="" class="product-panel__compare">
+                                                                <svg>
+                                                                    <use xlink:href="/image/sprite.svg#compare"></use>
+                                                                </svg>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Добавить к product-item__in-buy класс visible для отображения  -->
+                                                    <div class="product-item__in-buy">
+                                                        <a href="" class="button button_go-basker">
+                                                            <p class="p-one">
+                                                                <span class="fz14 fw700 white">В корзине</span>
+                                                                <span class="fz12 fw500 white">Перейти</span>
+                                                            </p>
                                                         </a>
+                                                        <div class="product-item__add-item-mobile">
+                                                            <div class="counter">
+                                                                <a class="counter_minus">
+                                                                    <svg>
+                                                                        <use xlink:href="/image/sprite.svg#minus"></use>
+                                                                    </svg>
+                                                                </a>
+                                                                <span class="counter__numb">1</span>
+                                                                <a class="counter__plus">
+                                                                    <svg>
+                                                                        <use xlink:href="/image/sprite.svg#plus"></use>
+                                                                    </svg>
+                                                                </a>
+                                                            </div>
+                                                            <a class="product-item__remove-item">
+                                                                <svg>
+                                                                    <use xlink:href="/image/sprite.svg#close"></use>
+                                                                </svg>
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -597,15 +624,19 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="product-item">
+                                        <!-- Галерея изображений -->
                                         <div class="gallery">
                                             <a href="#" class="gallery__img">
                                                 <img src="https://dummyimage.com/474x474" alt="">
                                             </a>
+                                            <!-- Тут стикеры Акция/Новинка и т.д. + блок с кнопками для добавления в Избранное и т.д. -->
                                             <div class="gallery__ui">
+                                                <!-- Стикеры -->
                                                 <div class="stickers">
                                                     <span class="stickers__new">New</span>
                                                     <span class="stickers__akcia">-10%</span>
                                                 </div>
+                                                <!-- Добавление в избранное -->
                                                 <div class="product-panel product-panel_gallery">
                                                     <!-- Добавить к product-panel__favorite и product-panel__compare класс active для изменения состояния -->
                                                     <a href="" class="product-panel__favorite active">
@@ -621,26 +652,134 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="product-item__content">
-                                            <a href="#" class="product-item__name">Печь-камин «Varde Uniq 2» Черная
-                                                сталь</a>
-                                            <ul class="chars">
-                                                <li class="chars__item">Отапливаемый объем: 240 м3</li>
-                                                <li class="chars__item">Материал топки: сталь, шамот</li>
-                                                <li class="chars__item">Отапливаемый объем: 240 м3</li>
-                                                <li class="chars__item">Материал топки: сталь, шамот</li>
-                                                <li class="chars__item">Отапливаемый объем: 240 м3</li>
-                                                <li class="chars__item">Материал топки: сталь, шамот</li>
-                                            </ul>
-                                        </div>
-                                        <div class="product-item__info">
-                                            <div class="product-item__head">
-                                                <div class="prices">
-                                                    <span class="prices__base">92 250₽</span>
-                                                    <span class="prices__old">102 500₽₽</span>
+                                        <div class="product-item__mobile-wrap">
+                                            <div class="product-item__content">
+                                                <a href="#" class="product-item__name">Печь-камин «Varde Uniq 2» Черная
+                                                    сталь</a>
+                                                <ul class="chars">
+                                                    <li class="chars__item">Отапливаемый объем: 240 м3</li>
+                                                    <li class="chars__item">Материал топки: сталь, шамот</li>
+                                                    <li class="chars__item">Отапливаемый объем: 240 м3</li>
+                                                    <li class="chars__item">Материал топки: сталь, шамот</li>
+                                                    <li class="chars__item">Отапливаемый объем: 240 м3</li>
+                                                    <li class="chars__item">Материал топки: сталь, шамот</li>
+                                                </ul>
+                                            </div>
+                                            <div class="product-item__info">
+                                                <div class="product-item__head">
+                                                    <div class="prices">
+                                                        <span class="prices__base">92 250₽</span>
+                                                        <span class="prices__old">102 500₽₽</span>
+                                                    </div>
+                                                    <div class="product-panel product-panel_info">
+                                                        <a href="" class="product-panel__favorite">
+                                                            <svg>
+                                                                <use xlink:href="/image/sprite.svg#product-favorite"></use>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="" class="product-panel__compare">
+                                                            <svg>
+                                                                <use xlink:href="/image/sprite.svg#compare"></use>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
                                                 </div>
-                                                <div class="product-panel product-panel_info">
-                                                    <a href="" class="product-panel__favorite">
+                                                <!-- Этот блок появляется только при строчном отображении карточки -->
+                                                <div class="points">
+                                                    <ul class="ul-unset">
+                                                        <li class="points__item">
+                                                            <span class="points__icon points__icon_stock"></span>
+                                                            <span>Есть в наличии</span>
+                                                        </li>
+                                                        <li class="points__item">
+                                                            <span class="points__icon points__icon_delivery"></span>
+                                                            <span>Доставим завтра</span>
+                                                        </li>
+                                                        <!-- <li class="points__item">
+                                                            <span class="points__icon points__icon_predzakaz"></span>
+                                                            <span>Предзаказ</span>
+                                                        </li>
+                                                        <li class="points__item">
+                                                            <span class="points__icon points__icon_nostock"></span>
+                                                            <span>Товар закончился</span>
+                                                        </li> -->
+                                                    </ul>
+                                                </div>
+                                                <div class="product-item__buy">
+                                                    <!-- Добавить к product-item__add-buy класс hidden для скрытия -->
+                                                    <div class="product-item__add-buy">
+                                                        <a href="" class="button">
+                                                            <svg>
+                                                                <use xlink:href="/image/sprite.svg#cart"></use>
+                                                            </svg>
+                                                            <span>Добавить в корзину</span>
+                                                        </a>
+                                                        <div class="product-panel product-panel_category">
+                                                            <!-- Добавить к product-panel__favorite и product-panel__compare класс active для изменения состояния -->
+                                                            <a href="" class="product-panel__favorite active">
+                                                                <svg>
+                                                                    <use xlink:href="/image/sprite.svg#product-favorite"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="" class="product-panel__compare">
+                                                                <svg>
+                                                                    <use xlink:href="/image/sprite.svg#compare"></use>
+                                                                </svg>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Добавить к product-item__in-buy класс visible для отображения  -->
+                                                    <div class="product-item__in-buy">
+                                                        <a href="" class="button button_go-basker">
+                                                            <p class="p-one">
+                                                                <span class="fz14 fw700 white">В корзине</span>
+                                                                <span class="fz12 fw500 white">Перейти</span>
+                                                            </p>
+                                                        </a>
+                                                        <div class="product-item__add-item-mobile">
+                                                            <div class="counter">
+                                                                <a class="counter_minus">
+                                                                    <svg>
+                                                                        <use xlink:href="/image/sprite.svg#minus"></use>
+                                                                    </svg>
+                                                                </a>
+                                                                <span class="counter__numb">1</span>
+                                                                <a class="counter__plus">
+                                                                    <svg>
+                                                                        <use xlink:href="/image/sprite.svg#plus"></use>
+                                                                    </svg>
+                                                                </a>
+                                                            </div>
+                                                            <a class="product-item__remove-item">
+                                                                <svg>
+                                                                    <use xlink:href="/image/sprite.svg#close"></use>
+                                                                </svg>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="product-item">
+                                        <!-- Галерея изображений -->
+                                        <div class="gallery">
+                                            <a href="#" class="gallery__img">
+                                                <img src="https://dummyimage.com/474x474" alt="">
+                                            </a>
+                                            <!-- Тут стикеры Акция/Новинка и т.д. + блок с кнопками для добавления в Избранное и т.д. -->
+                                            <div class="gallery__ui">
+                                                <!-- Стикеры -->
+                                                <div class="stickers">
+                                                    <span class="stickers__new">New</span>
+                                                    <span class="stickers__akcia">-10%</span>
+                                                </div>
+                                                <!-- Добавление в избранное -->
+                                                <div class="product-panel product-panel_gallery">
+                                                    <!-- Добавить к product-panel__favorite и product-panel__compare класс active для изменения состояния -->
+                                                    <a href="" class="product-panel__favorite active">
                                                         <svg>
                                                             <use xlink:href="/image/sprite.svg#product-favorite"></use>
                                                         </svg>
@@ -652,54 +791,111 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div class="points">
-                                                <ul class="ul-unset">
-                                                    <li class="points__item">
-                                                        <span class="points__icon points__icon_stock"></span>
-                                                        <span>Есть в наличии</span>
-                                                    </li>
-                                                    <li class="points__item">
-                                                        <span class="points__icon points__icon_delivery"></span>
-                                                        <span>Доставим завтра</span>
-                                                    </li>
-                                                    <!-- <li class="points__item">
-                                                        <span class="points__icon points__icon_predzakaz"></span>
-                                                        <span>Предзаказ</span>
-                                                    </li>
-                                                    <li class="points__item">
-                                                        <span class="points__icon points__icon_nostock"></span>
-                                                        <span>Товар закончился</span>
-                                                    </li> -->
+                                        </div>
+                                        <div class="product-item__mobile-wrap">
+                                            <div class="product-item__content">
+                                                <a href="#" class="product-item__name">Печь-камин «Varde Uniq 2» Черная
+                                                    сталь</a>
+                                                <ul class="chars">
+                                                    <li class="chars__item">Отапливаемый объем: 240 м3</li>
+                                                    <li class="chars__item">Материал топки: сталь, шамот</li>
+                                                    <li class="chars__item">Отапливаемый объем: 240 м3</li>
+                                                    <li class="chars__item">Материал топки: сталь, шамот</li>
+                                                    <li class="chars__item">Отапливаемый объем: 240 м3</li>
+                                                    <li class="chars__item">Материал топки: сталь, шамот</li>
                                                 </ul>
                                             </div>
-                                            <div class="product-item__buy">
-                                                <div class="product-item__add-buy">
-                                                    <a href="" class="button">
-                                                        <svg>
-                                                            <use xlink:href="/image/sprite.svg#cart"></use>
-                                                        </svg>
-                                                        <span>Добавить в корзину</span>
-                                                    </a>
+                                            <div class="product-item__info">
+                                                <div class="product-item__head">
+                                                    <div class="prices">
+                                                        <span class="prices__base">92 250₽</span>
+                                                        <span class="prices__old">102 500₽₽</span>
+                                                    </div>
+                                                    <div class="product-panel product-panel_info">
+                                                        <a href="" class="product-panel__favorite">
+                                                            <svg>
+                                                                <use xlink:href="/image/sprite.svg#product-favorite"></use>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="" class="product-panel__compare">
+                                                            <svg>
+                                                                <use xlink:href="/image/sprite.svg#compare"></use>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
                                                 </div>
-                                                <div class="product-item__in-buy">
-                                                    <a href="" class="button button_go-basker">
-                                                        <p class="p-one">
-                                                            <span class="fz14 fw700 white">В корзине</span>
-                                                            <span class="fz12 fw500 white">Перейти</span>
-                                                        </p>
-                                                    </a>
-                                                    <div class="counter">
-                                                        <a class="counter_minus">
+                                                <!-- Этот блок появляется только при строчном отображении карточки -->
+                                                <div class="points">
+                                                    <ul class="ul-unset">
+                                                        <li class="points__item">
+                                                            <span class="points__icon points__icon_stock"></span>
+                                                            <span>Есть в наличии</span>
+                                                        </li>
+                                                        <li class="points__item">
+                                                            <span class="points__icon points__icon_delivery"></span>
+                                                            <span>Доставим завтра</span>
+                                                        </li>
+                                                        <!-- <li class="points__item">
+                                                            <span class="points__icon points__icon_predzakaz"></span>
+                                                            <span>Предзаказ</span>
+                                                        </li>
+                                                        <li class="points__item">
+                                                            <span class="points__icon points__icon_nostock"></span>
+                                                            <span>Товар закончился</span>
+                                                        </li> -->
+                                                    </ul>
+                                                </div>
+                                                <div class="product-item__buy">
+                                                    <!-- Добавить к product-item__add-buy класс hidden для скрытия -->
+                                                    <div class="product-item__add-buy">
+                                                        <a href="" class="button">
                                                             <svg>
-                                                                <use xlink:href="/image/sprite.svg#minus"></use>
+                                                                <use xlink:href="/image/sprite.svg#cart"></use>
                                                             </svg>
+                                                            <span>Добавить в корзину</span>
                                                         </a>
-                                                        <span class="counter__numb">1</span>
-                                                        <a class="counter__plus">
-                                                            <svg>
-                                                                <use xlink:href="/image/sprite.svg#plus"></use>
-                                                            </svg>
+                                                        <div class="product-panel product-panel_category">
+                                                            <!-- Добавить к product-panel__favorite и product-panel__compare класс active для изменения состояния -->
+                                                            <a href="" class="product-panel__favorite active">
+                                                                <svg>
+                                                                    <use xlink:href="/image/sprite.svg#product-favorite"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="" class="product-panel__compare">
+                                                                <svg>
+                                                                    <use xlink:href="/image/sprite.svg#compare"></use>
+                                                                </svg>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Добавить к product-item__in-buy класс visible для отображения  -->
+                                                    <div class="product-item__in-buy">
+                                                        <a href="" class="button button_go-basker">
+                                                            <p class="p-one">
+                                                                <span class="fz14 fw700 white">В корзине</span>
+                                                                <span class="fz12 fw500 white">Перейти</span>
+                                                            </p>
                                                         </a>
+                                                        <div class="product-item__add-item-mobile">
+                                                            <div class="counter">
+                                                                <a class="counter_minus">
+                                                                    <svg>
+                                                                        <use xlink:href="/image/sprite.svg#minus"></use>
+                                                                    </svg>
+                                                                </a>
+                                                                <span class="counter__numb">1</span>
+                                                                <a class="counter__plus">
+                                                                    <svg>
+                                                                        <use xlink:href="/image/sprite.svg#plus"></use>
+                                                                    </svg>
+                                                                </a>
+                                                            </div>
+                                                            <a class="product-item__remove-item">
+                                                                <svg>
+                                                                    <use xlink:href="/image/sprite.svg#close"></use>
+                                                                </svg>
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -718,6 +914,286 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-md-4">
+                                    <div class="product-item">
+                                        <!-- Галерея изображений -->
+                                        <div class="gallery">
+                                            <a href="#" class="gallery__img">
+                                                <img src="https://dummyimage.com/474x474" alt="">
+                                            </a>
+                                            <!-- Тут стикеры Акция/Новинка и т.д. + блок с кнопками для добавления в Избранное и т.д. -->
+                                            <div class="gallery__ui">
+                                                <!-- Стикеры -->
+                                                <div class="stickers">
+                                                    <span class="stickers__new">New</span>
+                                                    <span class="stickers__akcia">-10%</span>
+                                                </div>
+                                                <!-- Добавление в избранное -->
+                                                <div class="product-panel product-panel_gallery">
+                                                    <!-- Добавить к product-panel__favorite и product-panel__compare класс active для изменения состояния -->
+                                                    <a href="" class="product-panel__favorite active">
+                                                        <svg>
+                                                            <use xlink:href="/image/sprite.svg#product-favorite"></use>
+                                                        </svg>
+                                                    </a>
+                                                    <a href="" class="product-panel__compare">
+                                                        <svg>
+                                                            <use xlink:href="/image/sprite.svg#compare"></use>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item__mobile-wrap">
+                                            <div class="product-item__content">
+                                                <a href="#" class="product-item__name">Печь-камин «Varde Uniq 2» Черная
+                                                    сталь</a>
+                                                <ul class="chars">
+                                                    <li class="chars__item">Отапливаемый объем: 240 м3</li>
+                                                    <li class="chars__item">Материал топки: сталь, шамот</li>
+                                                    <li class="chars__item">Отапливаемый объем: 240 м3</li>
+                                                    <li class="chars__item">Материал топки: сталь, шамот</li>
+                                                    <li class="chars__item">Отапливаемый объем: 240 м3</li>
+                                                    <li class="chars__item">Материал топки: сталь, шамот</li>
+                                                </ul>
+                                            </div>
+                                            <div class="product-item__info">
+                                                <div class="product-item__head">
+                                                    <div class="prices">
+                                                        <span class="prices__base">92 250₽</span>
+                                                        <span class="prices__old">102 500₽₽</span>
+                                                    </div>
+                                                    <div class="product-panel product-panel_info">
+                                                        <a href="" class="product-panel__favorite">
+                                                            <svg>
+                                                                <use xlink:href="/image/sprite.svg#product-favorite"></use>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="" class="product-panel__compare">
+                                                            <svg>
+                                                                <use xlink:href="/image/sprite.svg#compare"></use>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <!-- Этот блок появляется только при строчном отображении карточки -->
+                                                <div class="points">
+                                                    <ul class="ul-unset">
+                                                        <li class="points__item">
+                                                            <span class="points__icon points__icon_stock"></span>
+                                                            <span>Есть в наличии</span>
+                                                        </li>
+                                                        <li class="points__item">
+                                                            <span class="points__icon points__icon_delivery"></span>
+                                                            <span>Доставим завтра</span>
+                                                        </li>
+                                                        <!-- <li class="points__item">
+                                                            <span class="points__icon points__icon_predzakaz"></span>
+                                                            <span>Предзаказ</span>
+                                                        </li>
+                                                        <li class="points__item">
+                                                            <span class="points__icon points__icon_nostock"></span>
+                                                            <span>Товар закончился</span>
+                                                        </li> -->
+                                                    </ul>
+                                                </div>
+                                                <div class="product-item__buy">
+                                                    <!-- Добавить к product-item__add-buy класс hidden для скрытия -->
+                                                    <div class="product-item__add-buy">
+                                                        <a href="" class="button">
+                                                            <svg>
+                                                                <use xlink:href="/image/sprite.svg#cart"></use>
+                                                            </svg>
+                                                            <span>Добавить в корзину</span>
+                                                        </a>
+                                                        <div class="product-panel product-panel_category">
+                                                            <!-- Добавить к product-panel__favorite и product-panel__compare класс active для изменения состояния -->
+                                                            <a href="" class="product-panel__favorite active">
+                                                                <svg>
+                                                                    <use xlink:href="/image/sprite.svg#product-favorite"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="" class="product-panel__compare">
+                                                                <svg>
+                                                                    <use xlink:href="/image/sprite.svg#compare"></use>
+                                                                </svg>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Добавить к product-item__in-buy класс visible для отображения  -->
+                                                    <div class="product-item__in-buy">
+                                                        <a href="" class="button button_go-basker">
+                                                            <p class="p-one">
+                                                                <span class="fz14 fw700 white">В корзине</span>
+                                                                <span class="fz12 fw500 white">Перейти</span>
+                                                            </p>
+                                                        </a>
+                                                        <div class="product-item__add-item-mobile">
+                                                            <div class="counter">
+                                                                <a class="counter_minus">
+                                                                    <svg>
+                                                                        <use xlink:href="/image/sprite.svg#minus"></use>
+                                                                    </svg>
+                                                                </a>
+                                                                <span class="counter__numb">1</span>
+                                                                <a class="counter__plus">
+                                                                    <svg>
+                                                                        <use xlink:href="/image/sprite.svg#plus"></use>
+                                                                    </svg>
+                                                                </a>
+                                                            </div>
+                                                            <a class="product-item__remove-item">
+                                                                <svg>
+                                                                    <use xlink:href="/image/sprite.svg#close"></use>
+                                                                </svg>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="product-item">
+                                        <!-- Галерея изображений -->
+                                        <div class="gallery">
+                                            <a href="#" class="gallery__img">
+                                                <img src="https://dummyimage.com/474x474" alt="">
+                                            </a>
+                                            <!-- Тут стикеры Акция/Новинка и т.д. + блок с кнопками для добавления в Избранное и т.д. -->
+                                            <div class="gallery__ui">
+                                                <!-- Стикеры -->
+                                                <div class="stickers">
+                                                    <span class="stickers__new">New</span>
+                                                    <span class="stickers__akcia">-10%</span>
+                                                </div>
+                                                <!-- Добавление в избранное -->
+                                                <div class="product-panel product-panel_gallery">
+                                                    <!-- Добавить к product-panel__favorite и product-panel__compare класс active для изменения состояния -->
+                                                    <a href="" class="product-panel__favorite active">
+                                                        <svg>
+                                                            <use xlink:href="/image/sprite.svg#product-favorite"></use>
+                                                        </svg>
+                                                    </a>
+                                                    <a href="" class="product-panel__compare">
+                                                        <svg>
+                                                            <use xlink:href="/image/sprite.svg#compare"></use>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-item__mobile-wrap">
+                                            <div class="product-item__content">
+                                                <a href="#" class="product-item__name">Печь-камин «Varde Uniq 2» Черная
+                                                    сталь</a>
+                                                <ul class="chars">
+                                                    <li class="chars__item">Отапливаемый объем: 240 м3</li>
+                                                    <li class="chars__item">Материал топки: сталь, шамот</li>
+                                                    <li class="chars__item">Отапливаемый объем: 240 м3</li>
+                                                    <li class="chars__item">Материал топки: сталь, шамот</li>
+                                                    <li class="chars__item">Отапливаемый объем: 240 м3</li>
+                                                    <li class="chars__item">Материал топки: сталь, шамот</li>
+                                                </ul>
+                                            </div>
+                                            <div class="product-item__info">
+                                                <div class="product-item__head">
+                                                    <div class="prices">
+                                                        <span class="prices__base">92 250₽</span>
+                                                        <span class="prices__old">102 500₽₽</span>
+                                                    </div>
+                                                    <div class="product-panel product-panel_info">
+                                                        <a href="" class="product-panel__favorite">
+                                                            <svg>
+                                                                <use xlink:href="/image/sprite.svg#product-favorite"></use>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="" class="product-panel__compare">
+                                                            <svg>
+                                                                <use xlink:href="/image/sprite.svg#compare"></use>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <!-- Этот блок появляется только при строчном отображении карточки -->
+                                                <div class="points">
+                                                    <ul class="ul-unset">
+                                                        <li class="points__item">
+                                                            <span class="points__icon points__icon_stock"></span>
+                                                            <span>Есть в наличии</span>
+                                                        </li>
+                                                        <li class="points__item">
+                                                            <span class="points__icon points__icon_delivery"></span>
+                                                            <span>Доставим завтра</span>
+                                                        </li>
+                                                        <!-- <li class="points__item">
+                                                            <span class="points__icon points__icon_predzakaz"></span>
+                                                            <span>Предзаказ</span>
+                                                        </li>
+                                                        <li class="points__item">
+                                                            <span class="points__icon points__icon_nostock"></span>
+                                                            <span>Товар закончился</span>
+                                                        </li> -->
+                                                    </ul>
+                                                </div>
+                                                <div class="product-item__buy">
+                                                    <!-- Добавить к product-item__add-buy класс hidden для скрытия -->
+                                                    <div class="product-item__add-buy">
+                                                        <a href="" class="button">
+                                                            <svg>
+                                                                <use xlink:href="/image/sprite.svg#cart"></use>
+                                                            </svg>
+                                                            <span>Добавить в корзину</span>
+                                                        </a>
+                                                        <div class="product-panel product-panel_category">
+                                                            <!-- Добавить к product-panel__favorite и product-panel__compare класс active для изменения состояния -->
+                                                            <a href="" class="product-panel__favorite active">
+                                                                <svg>
+                                                                    <use xlink:href="/image/sprite.svg#product-favorite"></use>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="" class="product-panel__compare">
+                                                                <svg>
+                                                                    <use xlink:href="/image/sprite.svg#compare"></use>
+                                                                </svg>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Добавить к product-item__in-buy класс visible для отображения  -->
+                                                    <div class="product-item__in-buy">
+                                                        <a href="" class="button button_go-basker">
+                                                            <p class="p-one">
+                                                                <span class="fz14 fw700 white">В корзине</span>
+                                                                <span class="fz12 fw500 white">Перейти</span>
+                                                            </p>
+                                                        </a>
+                                                        <div class="product-item__add-item-mobile">
+                                                            <div class="counter">
+                                                                <a class="counter_minus">
+                                                                    <svg>
+                                                                        <use xlink:href="/image/sprite.svg#minus"></use>
+                                                                    </svg>
+                                                                </a>
+                                                                <span class="counter__numb">1</span>
+                                                                <a class="counter__plus">
+                                                                    <svg>
+                                                                        <use xlink:href="/image/sprite.svg#plus"></use>
+                                                                    </svg>
+                                                                </a>
+                                                            </div>
+                                                            <a class="product-item__remove-item">
+                                                                <svg>
+                                                                    <use xlink:href="/image/sprite.svg#close"></use>
+                                                                </svg>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <a href="" class="button button_more-elements">Показать еще</a>
                             <div class="pagination">
@@ -728,6 +1204,33 @@
                 </div>
             </div>
         </section>
+        <div class="idea">
+            <a href="#" class="idea__link">
+                <svg>
+                    <use xlink:href="/image/sprite.svg#dialog"></use>
+                </svg>
+                <span class="fw500">Предложить  улучшение или сообщить об ошибке</span>
+            </a>
+        </div>
+        <div class="sending">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5">
+                        <div class="sending__head">
+                            <p class="fz20 fw700 mb8">Подписывайтесь на нашу рассылку </p>
+                            <p>будьте в курсе новых дизайнерских тенденций, акций производителей и выгодных ценовых предложениях</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 offset-xl-2">
+                        <div class="sending__box mb8">
+                            <input type="text" placeholder="Введите ваш E-mail">
+                            <button type="submit" class="button">Подписаться</button>
+                        </div>
+                        <p class="gray-dark fz12">Нажимая на кнопку, я принимаю  Политику конфиденциальности и соглашаюсь получать сообщения  </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer class="footer">
         <div class="container">

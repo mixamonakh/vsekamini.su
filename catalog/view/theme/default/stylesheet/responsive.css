@@ -149,7 +149,7 @@
 }
 @media (max-width: 767px) {
   main {
-    margin: 99px auto 0 auto;
+    margin: 118px auto 0 auto;
   }
   .header-center {
     position: relative;
@@ -157,16 +157,9 @@
   .header-center__wrapper .button {
     display: none;
   }
-  .header-center .search {
-    position: absolute;
-    right: -1000px;
-  }
   .header-center .logo img {
     width: 77px;
     height: 32px;
-  }
-  .header-center .search-btn-mobile {
-    display: flex;
   }
   .banner__content {
     text-align: center;
@@ -403,5 +396,8 @@
   }
   .brand__wrapper .row {
     width: 1000px;
+  }
+  .view-buttons {
+    display: none;
   }
 }

@@ -31,7 +31,7 @@
                         <svg>
                             <use xlink:href="/image/sprite.svg#location"></use>
                         </svg>
-                        <span>Москва и Московская область</span>
+                        <span>Москва</span>
                     </div>
                     <nav class="menu">
                         <ul>
@@ -54,7 +54,7 @@
                                     </a>
 
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">О компании</a></li>
+                                        <li><a class="dropdown-item" href="https://ya.ru">О компании</a></li>
                                         <li><a class="dropdown-item" href="#">Гарантия и возврат </a></li>
                                         <li><a class="dropdown-item" href="#">Сотрудничество</a></li>
                                         <li><a class="dropdown-item" href="#">Вакансии</a></li>
@@ -155,11 +155,6 @@
                             </div>
                             <span class="fz12 fw700 darknest">Профиль</span>
                         </a>
-                    </div>
-                    <div class="search-btn-mobile">
-                        <svg>
-                            <use xlink:href="/image/sprite.svg#search"></use>
-                        </svg>
                     </div>
                     <a href="tel:" class="button button_transparent-bg">Заказать звонок</a>
                 </div>
@@ -382,7 +377,7 @@
                             <p class="h1 mb4 white">Лучшие <br> камины и печи <br>
                                 для дома и дачи</p>
                             <p class="mb32 fz16 fw500 white ttu">Консультации, подбор, продажа, установка. </p>
-                            <a href="#" class="button button_banner">Бесплатная консультация</a>
+                            <a data-bs-toggle="modal" data-bs-target="#consultation" class="button button_banner">Бесплатная консультация</a>
                         </div>
                     </div>
                     <div class="row">
@@ -2368,21 +2363,47 @@
             </div>
         </div>
     </footer>
-    <div class="modal fade" id="consultation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade modal_capture" id="consultation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content">
+                <div class="capture-form">
+                    <a class="capture-form__close" data-bs-dismiss="modal" aria-label="Close">
+                        <svg>
+                            <use xlink:href="/image/sprite.svg#close"></use>
+                        </svg>
+                    </a>
+                    <div class="capture-form__content">
+                        <p class="h2 capture-form__title mb64 text-center">
+                            Оставьте ваши контактные данные и наш специалист свяжется с вами в ближайшее время
+                        </p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="capture-form__forma">
+                                    <form action="" class="form">
+                                        <div class="form__box mb16">
+                                            <input type="text" class="form__input" placeholder="Введите ваше имя">
+                                        </div>
+                                        <div class="form__box mb16">
+                                            <input type="phone" class="form__input phone-mask">
+                                        </div>
+                                        <button class="button form__button smb8" type="submit">
+                                            Получить консультацию
+                                        </button>
+                                        <p class="capture-form__polity fz12 gray-dark">
+                                            Нажимая на кнопку, я принимаю  <a class="darknest" href="/">Политику конфиденциальности</a> и соглашаюсь получать сообщения  
+                                        </p>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="capture-form__img d-md-block d-none">
+                                    <img src="/image/man-consultation-big.png" alt="man-consultation-big">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
         </div>
       </div>
     <script src="/catalog/view/theme/default/js/script.js"></script>

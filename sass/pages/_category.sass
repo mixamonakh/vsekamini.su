@@ -5,7 +5,7 @@
         background-color: var(--basic-coral-the-lightest)
         padding: 25px
         border-radius: var(--bordrad-20)
-        margin-bottom: 16px
+        margin-bottom: 0.6667rem
     &__name
         line-height: 105%
     
@@ -13,9 +13,8 @@
     &__panel
         display: flex
         justify-content: space-between
-    &__main
-        // ! стилизация для карточек в виде блока
-        &.list
+    &__title
+        margin-bottom: 32px
             
                          
     
@@ -39,3 +38,24 @@
             cursor: pointer
             &.active
                 background-color: var(--basic-gray-the-lightest)
+// !xxl
+@media (max-width: 1399px)
+
+// !xl
+@media (max-width: 1199px)
+
+// !lg
+@media (max-width: 991px)
+
+// !md
+@media (max-width: 767px)
+    .subcategory-slider
+        &__img
+            padding: 15px
+        &__name
+            font-size: 12px
+            line-height: 16px
+    .consultation-hard
+        margin-bottom: 16px
+// !sm
+@media (max-width: 575px)

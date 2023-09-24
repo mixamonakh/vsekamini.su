@@ -75,3 +75,72 @@
             height: 240px
             margin-bottom: 0
             margin-left: 16px
+
+
+// ! модальные окна
+.modal
+    // ! модификация для модального окна с Формой Захвата
+    &_capture
+        .modal-dialog
+            max-width: 930px
+
+// ! форма захвата в модальном окне
+.capture-form
+    background-color: var(--white)
+    border-radius: var(--bordrad)
+    position: relative
+    overflow: hidden
+    &::before
+        content: ''
+        background: url('/image/bg-elements/capture-form-bg.svg')no-repeat 0%/cover
+        position: absolute
+        bottom: 0
+        right: 0
+        width: 50%
+        height: 35%
+        display: block
+    &__close
+        padding: 24px 24px 16px 24px
+        display: flex
+        justify-content: flex-end
+        svg
+            width: 24px
+            height: 24px
+    &__content
+        padding: 0 120px
+        position: relative
+        z-index: 2
+
+
+// !xxl
+@media (max-width: 1399px)
+
+// !xl
+@media (max-width: 1199px)
+
+// !lg
+@media (max-width: 991px)
+
+// !md
+@media (max-width: 767px)
+    .consultation-hard
+        padding: 24px
+        &__img
+            width: 100px
+            height: 100px
+        .fz22
+            font-size: 16px
+        .fz16
+            font-size: 12px
+    .capture-form
+        &::before
+            display: none
+        &__title
+            padding: 0 12px
+        &__close
+            padding: 12px 12px 32px 12px
+        &__content
+            padding: 0 12px 32px 12px
+
+// !sm
+@media (max-width: 575px)

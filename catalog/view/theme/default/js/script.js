@@ -21,6 +21,8 @@ if( $('body').width() < 1200 ){
     }
   });
 }
+
+
 // ! скрипт для кнопки Назад, но он не имеет смысла если hover в скриптах выше будет отрабатывать
 $('.menu-mobile-back').click(function(){
   $('.dpn-menu').removeClass('active');
@@ -171,6 +173,14 @@ if( $('body').width() < 768 ){
 }else {
   getMenuMobileContacts.before($('.menu-mobile .consultation'));
 }
+// ! перемещаем logo в мобильной версии в header-top
+const getMenuMobileLogo = $('.logo');
+if( $('body').width() < 768 ){
+  $('.header-top__location').after(getMenuMobileLogo);
+}else {
+  getMenuMobileLogo.before($('.menu-mobile__btn'));
+}
+
 // ! Нажатие на кнопочку menu-mobile__btn открываеет мобильное меню и вешает класс на body что бы запретить скролл страницы
 const getMenuMobileBtn = $('.menu-mobile__btn');
 const getMenuMobile = $('.menu-mobile');
@@ -203,7 +213,7 @@ var swiper = new Swiper(".category .swiper", {
   grabCursor: true,
   breakpoints: {
     320: {
-      slidesPerView: 1,
+      slidesPerView: 3,
       spaceBetween: 12,
     },
     768: {
@@ -251,4 +261,25 @@ getViewButtonList.click(function(){ // ? при клике на кнопку С�
     categoryMainBlock.find('.product-item').addClass('product-item_list')
     getWrapperConsultationHardInCategory.addClass('col-md-12').removeClass('col-md-8')
   }
+});
+
+
+// ! слайдер в галерее на странице товара
+var swiper = new Swiper(".product-gallery__mini", {
+  loop: true,
+  spaceBetween: 8,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+var swiper2 = new Swiper(".product-gallery__images", {
+  loop: true,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  thumbs: {
+    swiper: swiper,
+  },
 });

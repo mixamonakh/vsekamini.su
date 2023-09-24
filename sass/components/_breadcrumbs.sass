@@ -1,6 +1,7 @@
 .breadcrumbs
     list-style: none
-    padding: 16px 0
+    padding: 16px 0 32px 0
+    margin-bottom: 0
     li
         display: inline
         &::before
@@ -15,3 +16,19 @@
                 font-weight: 500
         a
             color: var(--gray-dark)
+// !xxl
+@media (max-width: 1399px)
+
+// !xl
+@media (max-width: 1199px)
+
+// !lg
+@media (max-width: 991px)
+
+// !md
+@media (max-width: 767px)
+    .breadcrumbs
+        list-style: none
+        padding: 16px 0 24px 0
+// !sm
+@media (max-width: 575px)

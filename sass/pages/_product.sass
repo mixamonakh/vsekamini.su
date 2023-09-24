@@ -1,0 +1,56 @@
+.product
+    &-gallery
+        &__images
+            img
+                width: 100%
+        &__mini
+            img
+                width: 80px
+                height: 80px
+    &-title
+        &__head
+            display: flex
+            align-items: center
+            justify-content: space-between
+        &__left
+            display: flex
+            align-items: center
+    &-descr
+        &__li
+            margin-bottom: 12px
+            display: flex
+            gap: 8px
+            & > span
+                width: 50%
+                &:nth-child(2)
+                    text-align: right
+
+// ! отзывы звездочки
+.review-stars
+    display: flex
+    align-items: center
+    margin-right: 24px
+    &__quant
+        white-space: nowrap
+// ! характеристики
+.product-chars
+    &
+
+// ! грид разметка
+.product-grid
+    display: grid
+    grid-template-columns: 450px 0.8fr 0.6fr
+    grid-template-rows: 90px 1fr 1fr
+    gap: 24px 24px
+    grid-auto-flow: row
+    grid-template-areas: "product-gallery product-title product-title" "product-gallery product-descr product-sticky" "product-tabs product-tabs product-sticky"
+.product-title
+    grid-area: product-title
+.product-descr
+    grid-area: product-descr
+.product-tabs
+    grid-area: product-tabs
+.product-gallery
+    grid-area: product-gallery
+.product-sticky
+    grid-area: product-sticky
