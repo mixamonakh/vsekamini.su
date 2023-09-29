@@ -363,7 +363,7 @@
             <!-- сюда перемещаются кнопочки корзина,сравнения и т.п. -->
         </div>
     </div>
-    <main>
+    <main class="page__home">
         <section class="banner">
             <picture class="banner__picture">
                 <source srcset="/image/banner/1-mob.jpg" media="(max-width: 767px)">
@@ -2218,11 +2218,11 @@
             </div>
         </section>
         <div class="idea">
-            <a href="#" class="idea__link">
+            <a data-bs-toggle="modal" data-bs-target="#offer-idea" class="idea__link">
                 <svg>
                     <use xlink:href="/image/sprite.svg#dialog"></use>
                 </svg>
-                <span class="fw500">Предложить  улучшение или сообщить об ошибке</span>
+                <span class="fw500">Предложить улучшение или сообщить об ошибке</span>
             </a>
         </div>
         <div class="sending">
@@ -2363,15 +2363,16 @@
             </div>
         </div>
     </footer>
+    <!-- Модальное окно - форма захвата -->
     <div class="modal fade modal_capture" id="consultation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="capture-form">
-                    <a class="capture-form__close" data-bs-dismiss="modal" aria-label="Close">
-                        <svg>
-                            <use xlink:href="/image/sprite.svg#close"></use>
-                        </svg>
-                    </a>
+                <a class="modal-close" data-bs-dismiss="modal" aria-label="Close">
+                    <svg>
+                        <use xlink:href="/image/sprite.svg#close"></use>
+                    </svg>
+                </a>
+                <div class="capture-form modal-wrapper">
                     <div class="capture-form__content">
                         <p class="h2 capture-form__title mb64 text-center">
                             Оставьте ваши контактные данные и наш специалист свяжется с вами в ближайшее время
@@ -2379,7 +2380,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="capture-form__forma">
-                                    <form action="" class="form">
+                                    <form action="" class="form form__capture">
                                         <div class="form__box mb16">
                                             <input type="text" class="form__input" placeholder="Введите ваше имя">
                                         </div>
@@ -2405,7 +2406,39 @@
                 </div>
             </div>
         </div>
-      </div>
+    </div>
+    <!-- Модальное окно - предложить улучшение -->
+    <div class="modal fade modal_add-review" id="offer-idea" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <a class="modal-close" data-bs-dismiss="modal" aria-label="Close">
+                    <svg>
+                        <use xlink:href="/image/sprite.svg#close"></use>
+                    </svg>
+                </a>
+                <div class="offer-idea modal-wrapper">
+                    <form action="#" class="form form__idea">
+                        <p class="h2 capture-form__title mb32 text-center">
+                            Поделитесь мнением, чтобы сделать эту страницу лучше
+                        </p>
+                        <div class="form__box smb16">
+                            <p class="txt-dark smb8">Что можно улучшить?</p>
+                            <textarea name="" class="offer-idea__text w-100"></textarea>
+                        </div>
+                        <div class="form__box smb16">
+                            <input type="email" class="form__input" placeholder="E-mail для обратной связи ">
+                        </div>
+                        <button class="button form__button smb8" type="submit">
+                            Отправить
+                        </button>
+                        <p class="capture-form__polity fz12 gray-dark">
+                            Нажимая на кнопку, я принимаю  <a class="darknest" href="/">Политику конфиденциальности</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="/catalog/view/theme/default/js/script.js"></script>
 </body>
 

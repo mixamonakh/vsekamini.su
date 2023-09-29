@@ -24,6 +24,33 @@
             right: -0
         &-disabled
             display: none
+.swiper-pagination-bullet
+    background-color: var(--gray-70)
+    width: 8px
+    height: 8px
+.swiper-pagination-bullet-active
+    background-color: var(--gray-dark)
+    transform: scale(110%)
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction
+    bottom: 0px
+
+
+.product-gallery-buttons
+    position: relative
+    display: flex
+    align-items: center
+    gap: 24px
+    .swiper-button
+        &-next, &-prev
+            margin-top: 0
+            flex: 0 0 24px
+            position: relative !important
+            top: unset !important
+            background-color: transparent
+            box-shadow: none
+            svg
+                fill: #383D42
+
 // ! swiper в каталоге для подкатегорий
 .category
     .swiper

@@ -1,0 +1,35 @@
+.rating-area 
+    display: flex
+    flex-direction: row-reverse
+    justify-content: start
+    &:not(:checked) 
+        & > input 
+            display: none 
+        & > label 
+            float: right 
+            width: 38px
+            padding: 0 
+            cursor: pointer 
+            font-size: 30px 
+            line-height: 30px 
+            color: #D9DDE3
+            &:before 
+                content: '★' 
+    & > input 
+        &:checked 
+            & ~ label 
+                color: #FBC335 
+                text-shadow: 1px 1px #c60 
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label 
+    color: #FBC335 
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label 
+    color: #FBC335 
+.rate-area 
+    & > label 
+        &:active 
+            position: relative 

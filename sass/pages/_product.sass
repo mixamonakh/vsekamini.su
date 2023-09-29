@@ -1,10 +1,22 @@
 .product
+    margin-bottom: 72px
     &-gallery
         &__images
+            margin-bottom: 24px
             img
                 width: 100%
+                border-radius: 15px
         &__mini
+            .swiper-slide
+                cursor: pointer
+                img
+                    transition: var(--transition)
+                    border: 2px solid transparent
+            .swiper-slide-thumb-active
+                img
+                    border-color: var(--basic-coral)
             img
+                border-radius: 15px
                 width: 80px
                 height: 80px
     &-title
@@ -15,7 +27,7 @@
         &__left
             display: flex
             align-items: center
-    &-descr
+    &-chars
         &__li
             margin-bottom: 12px
             display: flex
@@ -24,33 +36,377 @@
                 width: 50%
                 &:nth-child(2)
                     text-align: right
+    &-sticky
+        &__wrapper
+            position: sticky
+            top: 8px
+        &__box
+            padding: 16px
+            background-color: var(--basic-gray-the-lightest)
+            border-radius: 15px
+            margin-bottom: 16px
+    &-tabs
+        &__descr
+            margin-bottom: 64px
+
 
 // ! отзывы звездочки
 .review-stars
     display: flex
     align-items: center
     margin-right: 24px
+    &__icons
+        display: flex
+        gap: 4px
+        margin-right: 4px
+        span
+            width: 15px
+            height: 14px
+            background: url('../icons/review/nostar.svg')no-repeat 0%/contain
+            display: block
+        .percent100
+            background: url('../icons/review/star.svg')no-repeat 0%/contain
+        .percent50
+            background: url('../icons/review/star-50.svg')no-repeat 0%/contain
     &__quant
         white-space: nowrap
-// ! характеристики
-.product-chars
-    &
+// ! окошко с ценой и добавлением в корзину
+.buy-panel
+    .prices
+        flex-direction: column
+        margin-bottom: 16px
+        &__base
+            margin-bottom: 8px
+    &__custom
+        opacity: 1
+        .product-item__in-buy
+            flex-wrap: wrap
+    &__two-buttons
+        display: none
+        &.visible
+            display: block
+
+// ! выбор высоты
+.choice-height
+    display: none
+    &.visible
+        display: flex
+    &__select
+        width: 50%
+        select
+            width: 100%
+// ! скачать инструкцию
+.instructions
+    &__item
+        display: flex
+        gap: 8px
+        &:not(:last-child)
+            margin-bottom: 24px
+        &:hover
+            & > span
+                color: var(--basic-coral)
+    &__pdf
+        border-radius: 5px
+        background-color: var(--basic-red)
+        display: flex
+        align-items: center
+        justify-content: center
+        color: var(--white)
+        padding: 0 14px
+        font-weight: 600
+
+
 
 // ! грид разметка
 .product-grid
     display: grid
     grid-template-columns: 450px 0.8fr 0.6fr
-    grid-template-rows: 90px 1fr 1fr
+    grid-template-rows: 90px 1fr auto
     gap: 24px 24px
     grid-auto-flow: row
-    grid-template-areas: "product-gallery product-title product-title" "product-gallery product-descr product-sticky" "product-tabs product-tabs product-sticky"
+    grid-template-areas: "product-gallery product-title product-title" "product-gallery product-chars product-sticky" "product-tabs product-tabs product-sticky"
 .product-title
     grid-area: product-title
-.product-descr
-    grid-area: product-descr
+.product-chars
+    grid-area: product-chars
 .product-tabs
     grid-area: product-tabs
 .product-gallery
     grid-area: product-gallery
 .product-sticky
     grid-area: product-sticky
+
+// ! Табы
+.tabs
+    .nav-item
+        flex: 1
+    &__nav
+        list-style: none
+        margin: 0
+        padding: 0
+        display: flex
+        align-items: center
+        margin-bottom: 32px
+    &__link
+        padding: 8px 24px
+        color: var(--darknest)
+        font-weight: 700
+        font-size: 16px
+        line-height: 24px
+        position: relative
+        width: 100%
+        text-align: center
+        &.active
+            &::before
+                width: 100%
+                right: 0
+        &::before
+            content: ''
+            position: absolute
+            bottom: 0
+            height: 2px
+            background-color: var(--darknest)
+            width: 0
+            left: 0
+            transition: var(--transition)
+
+// ! Таб - комплектация
+.tabs-complekt
+    display: flex
+    &__content
+        flex: 0 0 70%
+        overflow-y: auto
+        max-height: 420px
+    &__prices
+        flex: 0 0 30%
+        display: flex
+        align-items: center
+        justify-content: center
+// ! карточка комплектующего товара
+.product-complekt
+    background-color: var(--basic-gray-the-lightest)
+    border-radius: var(--bordrad-15)
+    display: flex
+    align-items: center
+    padding: 6px
+    margin-bottom: 8px
+    &__gallery
+        margin-right: 12px
+        background-color: #fff
+    &__img
+        background-color: #fff
+        border-radius: var(--bordrad)
+    &__content
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__title
+        width: 40%
+    &__prices
+        width: 30%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+// ! Таб - о товаре
+.tabs-about
+    h3
+        margin-bottom: 1.5rem
+// ! Таб - характеристики
+.tabs-chars
+    &__ul
+        padding-right: 40%
+
+// ! Таб - отзывы
+.tabs-review
+    &__head
+        margin-bottom: 32px
+    &__rating
+        font-size: 36px
+        font-weight: 700
+        &-block
+            margin-right: 24px
+    &__range-item
+        display: flex
+        align-items: center
+        span
+            margin-right: 12px
+    &__range
+        display: block
+        width: 100%
+        height: 8px
+        border-radius: 8px
+        background-color: var(--basic-gray-the-lightest)
+        position: relative
+        overflow: hidden
+        span
+            background-color: var(--basic-coral)
+            position: absolute
+            z-index: 2
+            left: 0
+            top: 0
+            height: 8px
+            border-radius: 8px
+    &__range-block
+        width: 100%
+
+// ! карточка отзыва
+.product-review
+    background-color: var(--basic-gray-the-lightest)
+    padding: 16px 16px 32px 16px
+    border-radius: var(--bordrad)
+    margin-bottom: 16px
+    &__head
+        display: flex
+        justify-content: space-between
+    &__user
+        display: flex
+        align-items: center
+        gap: 12px
+    &__img
+        border-radius: 100%
+
+// ! Таб - видеообзор
+.tabs-video
+    iframe
+        width: 100% !important
+        min-height: 460px
+
+
+
+
+// !xxl
+@media (max-width: 1399px)
+
+// !xl
+@media (max-width: 1199px)
+
+// !lg
+@media (max-width: 991px)
+
+// !md
+@media (max-width: 767px)
+    .product-grid
+        grid-template-columns: minmax( auto, 767px )
+        grid-template-rows: auto
+        gap: 24px
+        grid-auto-flow: row
+        grid-template-areas: unset
+        display: flex
+        flex-direction: column
+        min-width: 0
+    .product-title
+        grid-area: unset
+    .product-chars
+        grid-area: unset
+    .product-tabs
+        grid-area: unset
+    .product-gallery
+        grid-area: unset
+    .product-sticky
+        grid-area: unset
+    .product-gallery__mini
+        display: none
+    .product
+        &-gallery
+            &__images
+                margin-bottom: 0
+                padding-bottom: 24px
+        &-title
+            &__head
+                flex-direction: column
+                align-items: start
+                gap: 8px
+            &__left
+                width: 100%
+                justify-content: space-between
+    .review-stars
+        margin-right: 0
+        &__quant
+            display: none
+    .product-chars
+        &__li
+            span
+                &:nth-child(1)
+                    width: 70%
+                &:nth-child(2)
+                    width: 30%
+    .tabs
+        .nav-item
+            white-space: nowrap
+            display: inline
+        &__nav
+            overflow: scroll
+            margin-bottom: 24px
+            padding-bottom: 8px
+    .tabs-complekt
+        flex-direction: column
+        &__content
+            flex: 1
+            max-height: 100%
+            overflow: visible
+        &__prices
+            flex: 1
+            text-align: center
+    .product-complekt
+        padding: 0
+        background-color: transparent
+        border-bottom: 1px solid var(--gray-gray)
+        padding-bottom: 8px
+        margin-bottom: 16px
+        border-radius: 0
+        &__content
+            flex-direction: column
+            gap: 8px
+        &__title, &__prices, &__quant
+            width: 100%
+        &__prices
+            flex-direction: row-reverse
+            justify-content: space-between
+    .tabs-chars__ul
+        padding-right: 0
+    .tabs-review
+        &__head
+            margin-bottom: 24px
+        &__range-block
+            margin-bottom: 16px
+        .tabs-review__range-item
+            margin-bottom: 8px
+    .product-review
+        &__head
+            flex-direction: column
+            gap: 8px
+        &__date
+            margin-bottom: 0
+    .tabs-video
+        iframe
+            min-height: 160px
+    .buy-panel
+        .points
+            display: none
+        &__box
+            display: flex
+            flex-direction: row-reverse
+            justify-content: space-between
+            gap: 8px
+    .choice-height
+        flex-direction: column
+        align-items: start !important
+        &__select
+            width: 100%
+    .product-sticky__wrapper
+        position: unset
+    .buy-panel
+        padding: 12px
+        margin-bottom: 0
+        position: fixed
+        width: 100%
+        bottom: 58px
+        border-radius: 0
+        z-index: 10
+        background-color: #fff
+        box-shadow: 0px -10px 100px 0px rgba(132, 160, 233, 0.15)
+// !sm
+@media (max-width: 575px)
+

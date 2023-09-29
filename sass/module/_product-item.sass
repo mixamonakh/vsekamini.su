@@ -49,31 +49,6 @@
         opacity: 0.8
         padding-left: 20px
         margin: 0
-    // ! пункты В наличии, не в наличии, предзаказ и т.п.
-    .points
-        display: none
-        &__item
-            display: flex
-            align-items: center
-            margin-bottom: 8px
-            &:nth-last-child(1)
-                margin-bottom: 0
-        &__icon
-            width: 24px
-            height: 24px
-            background-repeat: no-repeat
-            background-size: contain
-            display: block
-            margin-right: 8px
-            background-position: 0 0
-            &_stock
-                background-image: url('../icons/instock.svg')
-            &_delivery
-                background-image: url('../icons/delivery.svg')
-            &_predzakaz
-                background-image: url('../icons/preorder.svg')
-            &_nostock
-                background-image: url('../icons/nostock.svg')
     &__buy
         z-index: -1
         opacity: 0
@@ -98,27 +73,7 @@
             display: flex !important
         .button
             flex: 1 0 calc( 50% - 6px )
-    // ! добавить еще товар в карзину
-    .counter
-        border-radius: var(--bordrad)
-        border: 1px solid var(--gray-gray)
-        display: flex
-        justify-content: center
-        align-items: center
-        flex: 1 0 calc( 50% - 6px )
-        a
-            cursor: pointer
-            &:hover
-                svg
-                    fill: var(--basic-coral)
-        svg
-            width: 24px
-            height: 24px
-            flex: 0 0 24px
-        &__numb
-            font-size: 18px
-            font-weight: 500
-            padding: 0 14px
+
 // ! акции, новинка и так далее на картинке
 .stickers
     display: flex
@@ -146,6 +101,54 @@
         background-color: var(--basic-red)
     &__fast
         background-color: var(--basic-blue)
+// ! добавить еще товар в карзину
+.counter
+    border-radius: var(--bordrad)
+    border: 1px solid var(--gray-gray)
+    display: flex
+    justify-content: center
+    align-items: center
+    flex: 1 0 calc( 50% - 6px )
+    a
+        cursor: pointer
+        &:hover
+            svg
+                fill: var(--basic-coral)
+    svg
+        width: 24px
+        height: 24px
+        flex: 0 0 24px
+    &__numb
+        font-size: 18px
+        font-weight: 500
+        padding: 0 14px
+// ! пункты В наличии, не в наличии, предзаказ и т.п.
+.points
+    display: none
+    &_visible
+        display: block
+    &__item
+        display: flex
+        align-items: center
+        margin-bottom: 8px
+        &:nth-last-child(1)
+            margin-bottom: 0
+    &__icon
+        width: 24px
+        height: 24px
+        background-repeat: no-repeat
+        background-size: contain
+        display: block
+        margin-right: 8px
+        background-position: 0 0
+        &_stock
+            background-image: url('../icons/instock.svg')
+        &_delivery
+            background-image: url('../icons/delivery.svg')
+        &_predzakaz
+            background-image: url('../icons/preorder.svg')
+        &_nostock
+            background-image: url('../icons/nostock.svg')
 // ! блок с кнопочками Избранное и Сравнение
 .product-panel
     width: 50%

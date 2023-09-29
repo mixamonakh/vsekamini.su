@@ -282,4 +282,14 @@ var swiper2 = new Swiper(".product-gallery__images", {
   thumbs: {
     swiper: swiper,
   },
+  breakpoints: {
+    320: {
+      pagination: {
+        el: ".swiper-pagination"
+      },
+    },
+    768: {
+      slidesPerView: 1,
+    }
+  },
 });

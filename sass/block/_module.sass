@@ -1,4 +1,5 @@
 .module
+    overflow: hidden
     &__slide
         padding: 24px 0
 
@@ -79,17 +80,17 @@
 
 // ! модальные окна
 .modal
-    // ! модификация для модального окна с Формой Захвата
-    &_capture
-        .modal-dialog
+    .modal-dialog
             max-width: 930px
 
-// ! форма захвата в модальном окне
+// ! Модальное окно - форма захвата
 .capture-form
     background-color: var(--white)
     border-radius: var(--bordrad)
     position: relative
     overflow: hidden
+    &.modal-wrapper
+        padding-bottom: 0
     &::before
         content: ''
         background: url('/image/bg-elements/capture-form-bg.svg')no-repeat 0%/cover
@@ -99,17 +100,28 @@
         width: 50%
         height: 35%
         display: block
-    &__close
-        padding: 24px 24px 16px 24px
-        display: flex
-        justify-content: flex-end
-        svg
-            width: 24px
-            height: 24px
     &__content
-        padding: 0 120px
         position: relative
         z-index: 2
+// ! Модальное окно - добавить отзыв
+.add-review
+    textarea
+        max-height: 130px
+    
+
+// ! крестик во всех модальных окнах
+.modal-close
+    padding: 24px 24px 16px 24px
+    display: flex
+    justify-content: flex-end
+    cursor: pointer
+    svg
+        width: 24px
+        height: 24px
+// ! для паддинга, у большинства модалок
+.modal-wrapper
+    padding: 0 120px
+    padding-bottom: 96px
 
 
 // !xxl
@@ -137,10 +149,11 @@
             display: none
         &__title
             padding: 0 12px
-        &__close
-            padding: 12px 12px 32px 12px
-        &__content
-            padding: 0 12px 32px 12px
+
+    .modal-close
+        padding: 12px 12px 32px 12px
+    .modal-wrapper
+        padding: 0 12px 32px 12px
 
 // !sm
 @media (max-width: 575px)
